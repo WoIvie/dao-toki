@@ -123,6 +123,16 @@ export default async function BookPage({ params }: { params: Promise<{ lang: str
                       {dict.hero.download_epub}
                     </a>
                   )}
+                  {book.teaserVideoId && (
+                    <a
+                      href={`https://www.youtube.com/watch?v=${book.teaserVideoId}`}
+                      target="_blank"
+                      rel="noopener"
+                      className="btn ux-hover-btn ux-focus-ring"
+                    >
+                      {dict.hero.watch_teaser}
+                    </a>
+                  )}
                 </>
               ) : (
                 <>
@@ -136,20 +146,19 @@ export default async function BookPage({ params }: { params: Promise<{ lang: str
                       {dict.hero.buy_print}
                     </a>
                   )}
+                  {book.teaserVideoId && (
+                    <a
+                      href={`https://www.youtube.com/watch?v=${book.teaserVideoId}`}
+                      target="_blank"
+                      rel="noopener"
+                      className="btn ux-hover-btn ux-focus-ring"
+                    >
+                      {dict.hero.watch_teaser}
+                    </a>
+                  )}
                 </>
               )}
             </div>
-
-            {book.teaserVideoId && (
-              <a
-                href={`https://www.youtube.com/watch?v=${book.teaserVideoId}`}
-                target="_blank"
-                rel="noopener"
-                className={`${styles.teaserLink} ux-hover-btn ux-focus-ring`}
-              >
-                ▶ {dict.hero.watch_teaser}
-              </a>
-            )}
           </div>
         </div>
 
