@@ -1,99 +1,70 @@
-# Stoic Wisdom Series — Landing
+# dao-toki — Chinese Wisdom in toki pona
 
-[![Live](https://img.shields.io/badge/Live-stoic.abvx.xyz-2ea44f)](https://stoic.abvx.xyz)
-![Next.js](https://img.shields.io/badge/Next.js-App%20Router-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+Bilingual landing site (EN / TP) for the **Chinese Wisdom in toki pona** book series.
 
-## Live
-https://stoic.abvx.xyz
+Live target domain: **https://dao-toki.abvx.xyz**
 
-**License:** MIT. See [LICENSE](LICENSE).
+## What This Repo Contains
 
-Bilingual landing page (**English / toki pona**) for the *Stoic Wisdom Series*: classic Stoic texts reimagined in **toki pona**, with **sitelen pona** alongside Latin script.
+- Next.js App Router landing with localized routes:
+  - `/en`
+  - `/tp`
+- Root redirect:
+  - `/` -> `/en`
+- Launch catalog:
+  - Dao De Jing
+  - Sunzi: The Art of War in toki pona
+  - Mozi — Universal Love (FREE)
+- Book detail pages:
+  - `/en/books/dao-de-jing`, `/tp/books/dao-de-jing`
+  - `/en/books/sunzi`, `/tp/books/sunzi`
+  - `/en/books/mozi-universal-love`, `/tp/books/mozi-universal-love`
 
-Current catalog on the landing:
-- **Meditations of Marcus Aurelius — in Toki Pona** (Kindle + paperback)
-- **The Toki Pona Reader’s Kit** (free PDF)
+## Where To Edit Content
 
----
+### Dictionaries (all UI copy, hero/why/faq/book text)
 
-## ✦ About
-
-This project is intentionally **content-first**:
-- editorial layout
-- strong typography
-- simple structure
-- easy reuse for future book-series landings
-
-Texts live in JSON dictionaries; book links and images are kept in a single place.
-
----
-
-## 🧱 Tech Stack
-
-- **Framework:** Next.js (App Router)
-- **Language:** TypeScript
-- **Styling:** CSS Modules
-- **i18n:** Dictionary-based JSON (`/en` and `/tp` routes)
-- **Hosting:** Vercel
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── app/
-│   └── [lang]/           # Localized routes (/en, /tp)
-│       ├── page.tsx      # Main landing
-│       ├── legal/
-│       └── privacy/
-├── components/
-│   ├── Hero.tsx          # Book stack hero
-│   ├── WhySection.tsx    # Why-this-series section
-│   ├── BookSection.tsx   # Book blocks with CTAs
-│   └── Footer.tsx
-├── data/
-│   └── books.ts          # Book metadata & links
-└── dictionaries/
-    ├── en.json
-    └── tp.json
-
-public/
-└── assets/books/
-    ├── marcus-meditations/
-    └── readers-kit/
-```
-
----
-
-## ✍️ Content Editing
-
-### Dictionaries
-All visible text lives in:
 - `src/dictionaries/en.json`
 - `src/dictionaries/tp.json`
 
-### Books
-Book entries and outgoing links:
+### Books dataset (slugs, assets, CTAs, links, flags)
+
 - `src/data/books.ts`
 
-Images:
-- `public/assets/books/{book-id}/`
+### Assets
 
----
+- Book assets:
+  - `public/assets/books/dao-de-jing/`
+  - `public/assets/books/sunzi/`
+  - `public/assets/books/mozi-universal-love/`
+- Global OG/Twitter images:
+  - `public/og-image.jpg`
+  - `public/twitter-card.jpg`
 
-## 🚀 Development
+## Local Development
 
 ```bash
 npm install
 npm run dev
+```
+
+Open:
+- http://localhost:3000/en
+- http://localhost:3000/tp
+
+## Production Check
+
+```bash
 npm run build
 ```
 
----
+## Tech Stack
 
-## © License
+- Next.js (App Router)
+- TypeScript
+- CSS Modules
+- Dictionary-based i18n (EN / TP)
 
-© 2026 ABVX.xyz. All rights reserved.
+## License
+
+MIT — see `LICENSE`.
