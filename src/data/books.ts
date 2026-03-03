@@ -20,7 +20,7 @@ export interface BookLinks {
   amazonPrint?: string | null;
   downloadPdf?: string | null;
   downloadEpub?: string | null;
-  teaserVideoId?: string | null;
+  teaserUrl?: string | null;
 }
 
 export interface BookFlags {
@@ -36,7 +36,7 @@ export interface BookMeta {
 
 export interface Book {
   slug: string;
-  id: string; // Backward-compatible alias for legacy components.
+  id: string;
   type: 'commercial' | 'gift';
   title: LocalizedString;
   author: LocalizedString;
@@ -48,7 +48,6 @@ export interface Book {
   meta: BookMeta;
   identifiers?: BookIdentifiers;
 
-  // Legacy field aliases kept to avoid breaking existing UI components.
   coverImage: string;
   promoImage: string;
   amazonKindleUrl?: string;
@@ -75,20 +74,20 @@ const seeds: BookSeed[] = [
     slug: 'dao-de-jing',
     type: 'commercial',
     title: {
-      en: 'Dao De Jing — in toki pona',
-      tp: 'lipu Dao De Jing lon toki pona',
+      en: 'Dao De Jing',
+      tp: 'Dao De Jing',
     },
     author: {
       en: 'Laozi',
       tp: 'jan Losi',
     },
     shortDescription: {
-      en: 'Foundational Daoist text in the Chinese Wisdom in toki pona format.',
-      tp: 'lipu open pi sona Dao lon nasin Chinese Wisdom lon toki pona.',
+      en: 'Traditional Chinese + toki pona in sitelen pona',
+      tp: 'sitelen Sonko + toki pona lon nasin sitelen pona',
     },
     longDescription: {
-      en: 'Content draft pending. Data structure and routes are fixed for this title.',
-      tp: 'ijo pi toki suli li kama lon tenpo kama. nasin data en nasin URL li awen pona.',
+      en: 'Includes: English foreword, chapter guide, classical Chinese text, toki pona, sitelen-pona-ready layout.',
+      tp: 'ijo insa: toki Inli pi open lipu, sona lili pi anpa lipu ale, sitelen Sonko, toki pona, nasin sitelen pona-ready.',
     },
     assets: {
       cover: '/assets/books/dao-de-jing/cover.svg',
@@ -96,38 +95,42 @@ const seeds: BookSeed[] = [
     },
     links: {
       learnMore: '/books/dao-de-jing',
-      amazonKindle: null,
-      amazonPrint: null,
-      teaserVideoId: null,
+      amazonKindle: 'https://www.amazon.com/dp/B0G4XNRS4W',
+      amazonPrint: 'https://www.amazon.com/dp/B0G5MCFN2T',
+      teaserUrl: 'https://youtu.be/oWA-_FatU3E',
     },
     flags: {
       isFree: false,
-      isPublished: false,
+      isPublished: true,
     },
     meta: {
       dictionaryKey: 'dao-de-jing',
       seoTitleKey: 'collection.dao-de-jing.title',
       seoDescriptionKey: 'collection.dao-de-jing.shortDesc',
     },
+    identifiers: {
+      asinKindle: 'B0G4XNRS4W',
+      asinPrint: 'B0G5MCFN2T',
+    },
   },
   {
     slug: 'sunzi',
     type: 'commercial',
     title: {
-      en: 'Sunzi — in toki pona',
-      tp: 'lipu Sunzi lon toki pona',
+      en: 'Sunzi: The Art of War in toki pona',
+      tp: 'Sunzi: The Art of War in toki pona',
     },
     author: {
       en: 'Sunzi',
       tp: 'jan Sunzi',
     },
     shortDescription: {
-      en: 'Classical strategic text adapted to the same bilingual landing system.',
-      tp: 'lipu sona pi nasin utala lon nasin bilingual sama ni.',
+      en: 'Traditional Chinese, English, toki pona, sitelen pona',
+      tp: 'sitelen Sonko, toki Inli, toki pona, sitelen pona',
     },
     longDescription: {
-      en: 'Content draft pending. Data structure and routes are fixed for this title.',
-      tp: 'ijo pi toki suli li kama lon tenpo kama. nasin data en nasin URL li awen pona.',
+      en: 'Includes: English, Traditional Chinese, toki pona, sitelen-ready line, glossary notes.',
+      tp: 'ijo insa: toki Inli, sitelen Sonko, toki pona, nasin sitelen pona-ready, sona nimi.',
     },
     assets: {
       cover: '/assets/books/sunzi/cover.svg',
@@ -135,38 +138,42 @@ const seeds: BookSeed[] = [
     },
     links: {
       learnMore: '/books/sunzi',
-      amazonKindle: null,
-      amazonPrint: null,
-      teaserVideoId: null,
+      amazonKindle: 'https://www.amazon.com/dp/B0GQTZFFVG',
+      amazonPrint: 'https://www.amazon.com/dp/B0GQXP442Z',
+      teaserUrl: 'https://youtu.be/sJdkHP6Pk-k',
     },
     flags: {
       isFree: false,
-      isPublished: false,
+      isPublished: true,
     },
     meta: {
       dictionaryKey: 'sunzi',
       seoTitleKey: 'collection.sunzi.title',
       seoDescriptionKey: 'collection.sunzi.shortDesc',
     },
+    identifiers: {
+      asinKindle: 'B0GQTZFFVG',
+      asinPrint: 'B0GQXP442Z',
+    },
   },
   {
     slug: 'mozi-universal-love',
-    type: 'commercial',
+    type: 'gift',
     title: {
-      en: 'Mozi: Universal Love — in toki pona',
-      tp: 'lipu Mozi: jan ale o olin lon toki pona',
+      en: 'Mozi — Universal Love',
+      tp: 'Mozi — Universal Love',
     },
     author: {
       en: 'Mozi',
       tp: 'jan Mozi',
     },
     shortDescription: {
-      en: 'Mozi-focused volume with canonical slug and stable asset routing.',
-      tp: 'lipu Mozi li jo e slug pona en nasin awen pi sitelen.',
+      en: 'Free series preview / full text',
+      tp: 'lipu free / open pi kulupu',
     },
     longDescription: {
-      en: 'Content draft pending. Data structure and routes are fixed for this title.',
-      tp: 'ijo pi toki suli li kama lon tenpo kama. nasin data en nasin URL li awen pona.',
+      en: 'Includes: full text, series preview format, parallel reading layout.',
+      tp: 'ijo insa: lipu ale, nasin preview pi kulupu, nasin lukin poka.',
     },
     assets: {
       cover: '/assets/books/mozi-universal-love/cover.svg',
@@ -174,13 +181,12 @@ const seeds: BookSeed[] = [
     },
     links: {
       learnMore: '/books/mozi-universal-love',
-      amazonKindle: null,
-      amazonPrint: null,
-      teaserVideoId: null,
+      downloadPdf: 'https://toki-free.abvx.xyz/books/chinese-wisdom/chinese-wisdom.pdf',
+      teaserUrl: 'https://youtu.be/BOVyG1jP580',
     },
     flags: {
-      isFree: false,
-      isPublished: false,
+      isFree: true,
+      isPublished: true,
     },
     meta: {
       dictionaryKey: 'mozi-universal-love',
@@ -189,6 +195,23 @@ const seeds: BookSeed[] = [
     },
   },
 ];
+
+function toYouTubeVideoId(url?: string | null): string | undefined {
+  if (!url) return undefined;
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === 'youtu.be') {
+      return parsed.pathname.replace(/^\//, '') || undefined;
+    }
+    if (parsed.hostname.includes('youtube.com')) {
+      const id = parsed.searchParams.get('v');
+      return id || undefined;
+    }
+    return undefined;
+  } catch {
+    return undefined;
+  }
+}
 
 export const books: Book[] = seeds.map((book) => ({
   ...book,
@@ -199,6 +222,5 @@ export const books: Book[] = seeds.map((book) => ({
   amazonPrintUrl: book.links.amazonPrint ?? undefined,
   downloadPdfUrl: book.links.downloadPdf ?? undefined,
   downloadEpubUrl: book.links.downloadEpub ?? undefined,
-  teaserVideoId: book.links.teaserVideoId ?? undefined,
+  teaserVideoId: toYouTubeVideoId(book.links.teaserUrl),
 }));
-
