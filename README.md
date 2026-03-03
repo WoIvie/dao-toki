@@ -1,70 +1,39 @@
-# dao-toki — Chinese Wisdom in toki pona
+# dao-toki
 
-Bilingual landing site (EN / TP) for the **Chinese Wisdom in toki pona** book series.
+Bilingual landing for **Chinese Wisdom in toki pona**.
 
-Live target domain: **https://dao-toki.abvx.xyz**
+- Domain: https://dao-toki.abvx.xyz
+- Languages: `/en` and `/tp`
+- Root redirect: `/` -> `/en`
 
-## What This Repo Contains
+## Launch Books
 
-- Next.js App Router landing with localized routes:
-  - `/en`
-  - `/tp`
-- Root redirect:
-  - `/` -> `/en`
-- Launch catalog:
-  - Dao De Jing
-  - Sunzi: The Art of War in toki pona
-  - Mozi — Universal Love (FREE)
-- Book detail pages:
-  - `/en/books/dao-de-jing`, `/tp/books/dao-de-jing`
-  - `/en/books/sunzi`, `/tp/books/sunzi`
-  - `/en/books/mozi-universal-love`, `/tp/books/mozi-universal-love`
+1. Dao De Jing
+2. Sunzi: The Art of War in toki pona
+3. Mozi — Universal Love (free)
 
-## Where To Edit Content
+## Architecture
 
-### Dictionaries (all UI copy, hero/why/faq/book text)
+This project uses the same landing architecture style as the `stoic-wisdom-series` codebase:
+- Next.js App Router
+- TypeScript
+- CSS Modules
+- dictionary-based EN/TP content
 
-- `src/dictionaries/en.json`
-- `src/dictionaries/tp.json`
+## Where To Edit
 
-### Books dataset (slugs, assets, CTAs, links, flags)
-
-- `src/data/books.ts`
-
-### Assets
-
+- Dictionaries:
+  - `src/dictionaries/en.json`
+  - `src/dictionaries/tp.json`
+- Books dataset:
+  - `src/data/books.ts`
 - Book assets:
-  - `public/assets/books/dao-de-jing/`
-  - `public/assets/books/sunzi/`
-  - `public/assets/books/mozi-universal-love/`
-- Global OG/Twitter images:
-  - `public/og-image.jpg`
-  - `public/twitter-card.jpg`
+  - `public/<book>/assets` (in this repo: `public/assets/books/<book-slug>/`)
 
-## Local Development
+## Local Commands
 
 ```bash
 npm install
 npm run dev
-```
-
-Open:
-- http://localhost:3000/en
-- http://localhost:3000/tp
-
-## Production Check
-
-```bash
 npm run build
 ```
-
-## Tech Stack
-
-- Next.js (App Router)
-- TypeScript
-- CSS Modules
-- Dictionary-based i18n (EN / TP)
-
-## License
-
-MIT — see `LICENSE`.
