@@ -99,9 +99,9 @@ export default function Footer({ dict, lang }: { dict: any; lang: 'en' | 'tp' })
               />
               <Banner
                 variant="learn"
-                href="https://toki.abvx.xyz/learn"
-                title="Learn Toki Pona"
-                subtitle="Curated resources + books + the Reader’s Kit."
+                href="https://stoic.abvx.xyz/"
+                title="Stoic Wisdom in Toki Pona"
+                subtitle="Read Stoic classics in toki pona with the same landing format."
                 iconText=">"
               />
               <Banner
