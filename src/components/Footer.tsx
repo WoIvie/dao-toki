@@ -42,7 +42,7 @@ export default function Footer({ dict, lang }: { dict: any; lang: 'en' | 'tp' })
   const socialMedium = 'https://abvcreative.medium.com/';
   const socialSubstack = 'https://abvx.substack.com/';
   const socialGitHub = 'https://github.com/markoblogo';
-  const mailto = 'mailto:a.biletskyi@gmail.com?subject=Stoic%20Wisdom%20Series';
+  const mailto = 'mailto:a.biletskyi@gmail.com?subject=Chinese%20Wisdom%20in%20toki%20pona';
   const emailDisplay = 'a.biletskyi@gmail.com';
 
   return (

@@ -8,7 +8,6 @@ import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
 import styles from './page.module.css';
 import { books } from '@/data/books';
-import { moreBooks } from '@/data/moreBooks';
 import { orgJsonLd, seriesJsonLd, websiteJsonLd, jsonLdForBook } from '@/lib/jsonld';
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
@@ -23,7 +22,6 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       websiteJsonLd(validLang),
       seriesJsonLd(validLang),
       ...books.map((b) => jsonLdForBook(validLang, b)),
-      ...moreBooks.map((b) => jsonLdForBook(validLang, b)),
     ],
   };
 
@@ -46,7 +44,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   return (
     <main className={styles.main}>
       <Script
-        id="jsonld-stoic-series"
+        id="jsonld-chinese-wisdom-series"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
       />
